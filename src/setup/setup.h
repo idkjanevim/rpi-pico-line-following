@@ -7,6 +7,7 @@
 #include "hardware/pwm.h"
 #include "hardware/irq.h"
 
+
 #define LEFT_LED 15
 #define RIGHT_LED 14
 
@@ -18,8 +19,8 @@
 #define M2I1 20
 #define M2I2 21
 
-#define M1SPEED 26
-#define M2SPEED 27
+#define M1SPEED 27
+#define M2SPEED 26
 
 
 void setup();

@@ -11,8 +11,8 @@
 #define RIGHT_SENSOR 16
 #define LEFT_SENSOR 17
 
-#define M1SPEED 26
-#define M2SPEED 27
+#define M1SPEED 27
+#define M2SPEED 26
 
 extern int RIGHT_MOTOR_SPEED;
 extern int LEFT_MOTOR_SPEED;
