@@ -5,11 +5,7 @@ void sensor_callback(uint gpio)
 {
     if(gpio == LEFT_SENSOR)
     {
-        if(!gpio_get(LEFT_SENSOR))
-        {
-
-        }
-        else
+        if(gpio_get(LEFT_SENSOR))
         {
             RIGHT_MOTOR_SPEED = 65535;
             LEFT_MOTOR_SPEED = 0;
@@ -19,11 +15,7 @@ void sensor_callback(uint gpio)
     }
     else
     {
-        if(!gpio_get(RIGHT_SENSOR))
-        {
-
-        }
-        else
+        if(gpio_get(RIGHT_SENSOR))
         {
             LEFT_MOTOR_SPEED = 65535;
             RIGHT_MOTOR_SPEED = 0;
