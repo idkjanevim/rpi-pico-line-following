@@ -22,5 +22,7 @@
 #define M1SPEED 27
 #define M2SPEED 26
 
+#define BUTTON 28
+
 
 void setup();

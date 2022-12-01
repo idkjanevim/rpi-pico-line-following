@@ -14,9 +14,11 @@
 #define M1SPEED 27
 #define M2SPEED 26
 
+#define BUTTON 28
+
 extern int RIGHT_MOTOR_SPEED;
 extern int LEFT_MOTOR_SPEED;
 
-
+extern bool running;
 
 void sensor_callback(uint gpio);

@@ -3,6 +3,8 @@
 int RIGHT_MOTOR_SPEED = 0;
 int LEFT_MOTOR_SPEED = 0;
 
+bool running = false;
+
 void setup()
 {
     //LEDS
@@ -18,6 +20,11 @@ void setup()
     gpio_init(LEFT_SENSOR);
     gpio_set_dir(LEFT_SENSOR, GPIO_IN);
     gpio_pull_up(LEFT_SENSOR);
+
+    //START BUTTON
+    gpio_init(BUTTON);
+    gpio_set_dir(BUTTON, GPIO_IN);
+    gpio_pull_up(BUTTON);
 
     //MOTOR CONTROL
     gpio_init(M1I1);
@@ -62,6 +69,8 @@ void setup()
     //SETTING UP SENSOR IRQ
     gpio_set_irq_enabled_with_callback(RIGHT_SENSOR, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, (gpio_irq_callback_t)&sensor_callback);
     gpio_set_irq_enabled_with_callback(LEFT_SENSOR, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, (gpio_irq_callback_t)&sensor_callback);
+
+    //SETTING UP BUTTON IRQ
 
     //TURNING ON MOTORS
     gpio_put(M1I1, 1);

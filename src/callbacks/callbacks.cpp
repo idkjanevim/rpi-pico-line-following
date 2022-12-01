@@ -32,3 +32,11 @@ void sensor_callback(uint gpio)
         }
     }
 }
+
+void button_callback(uint gpio)
+{
+    if(!gpio_get(BUTTON))
+    {
+        running = true; 
+    }
+}
