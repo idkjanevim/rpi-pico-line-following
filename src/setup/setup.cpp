@@ -64,10 +64,10 @@ void setup()
     gpio_set_irq_enabled_with_callback(LEFT_SENSOR, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, (gpio_irq_callback_t)&sensor_callback);
 
     //TURNING ON MOTORS
-    gpio_put(M1I1, 0);
-    gpio_put(M1I2, 1);
-    gpio_put(M2I1, 0);
-    gpio_put(M2I2, 1);
+    gpio_put(M1I1, 1);
+    gpio_put(M1I2, 0);
+    gpio_put(M2I1, 1);
+    gpio_put(M2I2, 0);
 
     
     stdio_init_all();
